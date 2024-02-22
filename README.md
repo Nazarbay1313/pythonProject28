@@ -33,16 +33,16 @@ redis-cli ping
 celery -A coolsite worker -l INFO
 ```
 <h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
-<br>
+<hr>
 <h3>About this project: </h3>
 <p>This application is a social network with an online sushi delivery store,
           where each user has the opportunity not only to add a product to the cart and complete an order, but also
           create a personal account, express your opinion in the comments about each dish, and participate
           in discussing new dishes!
           The administrator has the ability to control all orders and contact his clients via gmail (smtp).</p>
-<br>
+<hr>
 <p>This project was developed by me personally! </p>
-<br>
+<hr>
 <p>If you have questions or suggestions, please contact me through my email <b>@nazik3110@gmail.com</b></p>
 
 
