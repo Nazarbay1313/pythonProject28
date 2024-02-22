@@ -8,13 +8,10 @@ Through POSTMAN you can receive database objects.
 Of course, I added my access rights there.
 Get a token and perform operations to create/delete/update objects.</p> 
 <hr>
+<h3>Installation</h3>
+<p>1)Download, then drag and drop the coolsite directory into your project</h4>
+<hp>2)Make this directory 'as sourses root'</h4>
 <hr>
-<h4>Installation</h4>
-<h2>1)Download, then drag and drop the coolsite directory into your project</h4>
-<h2>2)Make this directory 'as sourses root'</h4>
-<hr>
-
-To deploy this project run
 
 ```bash
   pip install -r requirements.txt
