@@ -35,7 +35,13 @@ celery -A coolsite worker -l INFO
 <h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
 <hr>
 <h3>About this project: </h3>
-<p>This application is a network with an online sushi delivery store, where each user has the opportunity not only to add a product to the cart, adjust its quantity and place an order, but also to create a personal account, express their opinion in the comments on each dish and participate in discussions of new dishes! The administrator has the ability to control all orders and contact my clients via Gmail (smtp).</p>
+<p>This application is a network with an online sushi delivery store, where each user has the opportunity not only to add a product to the cart, adjust its quantity and place an order, but also to create a personal account, express their opinion in the comments on each dish and participate in discussions of new dishes! The administrator has the ability to control all orders and contact my clients via Gmail (smtp).
+<br>
+<p>Also, in this project I added an API section.
+Through POSTMAN you can receive database objects.
+Of course, I added my access rights there.
+Get a token and perform operations to create/delete/update objects.</p>  
+</p>
 <hr>
 <p>This project was developed by me personally! </p>
 <hr>
