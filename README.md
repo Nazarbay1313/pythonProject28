@@ -21,22 +21,22 @@ cd coolsite
 ```
 
 ```bash
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ```bash
-  python manage.py makemigrations
+python manage.py makemigrations
 ```
 ```bash
-  python manage.py migrate
+python manage.py migrate
 ```
 ```bash
-  python manage.py createsuperuser
+python manage.py createsuperuser
 ```
 ```bash
-  python manage.py loaddata product/fixtures/tags.json
+python manage.py loaddata product/fixtures/tags.json
 ```
 ```bash
-  python manage.py loaddata product/fixtures/products.json
+python manage.py loaddata product/fixtures/products.json
 ```
 *Make sure redis is working correctly and play with it
 ```bash
