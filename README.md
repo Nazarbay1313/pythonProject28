@@ -1,4 +1,8 @@
 <h2>Hello! I am instructing you about this project.</h3>
+<p>-DJANGO</p>
+<p>-DjangoRestFramework</p>
+<p>-REDIS</p>
+<p>-CELERY</p>
 <h3>Description and capabilities: </h3>
 <p>This application is a network with an online sushi delivery store, where each user has the opportunity not only to add a product to the cart, adjust its quantity and place an order, but also to create a personal account, express their opinion in the comments on each dish and participate in discussions of new dishes! The administrator has the ability to control all orders and contact my clients via Gmail (smtp).
 <br>
