@@ -13,7 +13,7 @@ Get a token and perform operations to create/delete/update objects.</p>
 <hr>
 <h3>Installation</h3>
 <p>1)Download, then drag and drop the coolsite directory into your project</h4>
-<p>2)Make this directory 'as sourses root'</p>
+<p>2)Mark this directory 'as sourses root'</p>
 <hr>
 
 ```bash
