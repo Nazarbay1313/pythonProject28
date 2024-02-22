@@ -9,7 +9,6 @@
 <h5>6)python manage.py loaddata product/fixtures/tags.json</h5>
 <h5>7)python manage.py loaddata product/fixtures/products.json</h5>
 <br>
-## Структура проекта
 <h3>About this project: </h3>
 <p>This application is a social network with an online sushi delivery store,
           where each user has the opportunity not only to add a product to the cart and complete an order, but also
