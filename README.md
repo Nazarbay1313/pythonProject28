@@ -8,6 +8,9 @@
 <h5>5)python manage.py createsuperuser</h5>
 <h5>6)python manage.py loaddata product/fixtures/tags.json</h5>
 <h5>7)python manage.py loaddata product/fixtures/products.json</h5>
+<h5>*Make sure redis is working correctly and play with it redis-cli ping</h5>
+<h5>*Make sure celery is working correctly by writing the command celery -A coolsite worker -l INFO</h5>
+<h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
 <br>
 <h3>About this project: </h3>
 <p>This application is a social network with an online sushi delivery store,
