@@ -2,16 +2,37 @@
 <br>
 <h5>1)download, then drag and drop the coolsite directory into your project</h5>
 <h5></h5>2)make this directory 'as sourses root'</h5>
+
+## Deployment
+
+To deploy this project run
+
 ```bash
-  npm run deplo
+  pip install -r requirements.txt
 ```
-<h5>3)python manage.py makemigrations</h5>
-<h5>4)python manage.py migrate</h5>
-<h5>5)python manage.py createsuperuser</h5>
-<h5>6)python manage.py loaddata product/fixtures/tags.json</h5>
-<h5>7)python manage.py loaddata product/fixtures/products.json</h5>
-<h5>*Make sure redis is working correctly and play with it redis-cli ping</h5>
-<h5>*Make sure celery is working correctly by writing the command celery -A coolsite worker -l INFO</h5>
+```bash
+  python manage.py makemigrations
+```
+```bash
+  python manage.py migrate
+```
+```bash
+  python manage.py createsuperuser
+```
+```bash
+  python manage.py loaddata product/fixtures/tags.json
+```
+```bash
+  python manage.py loaddata product/fixtures/products.json
+```
+*Make sure redis is working correctly and play with it
+```bash
+redis-cli ping
+```
+*Make sure celery is working correctly by writing the command
+```bash
+celery -A coolsite worker -l INFO
+```
 <h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
 <br>
 <h3>About this project: </h3>
