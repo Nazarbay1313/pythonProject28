@@ -1,4 +1,4 @@
-<h3>Hello! I am instructing you about this project.</h3>
+<h2>Hello! I am instructing you about this project.</h3>
 <hr>
 <h3>Description and capabilities: </h3>
 <p>This application is a network with an online sushi delivery store, where each user has the opportunity not only to add a product to the cart, adjust its quantity and place an order, but also to create a personal account, express their opinion in the comments on each dish and participate in discussions of new dishes! The administrator has the ability to control all orders and contact my clients via Gmail (smtp).
@@ -9,8 +9,9 @@ Of course, I added my access rights there.
 Get a token and perform operations to create/delete/update objects.</p> 
 <hr>
 <hr>
-<h4>1)Download, then drag and drop the coolsite directory into your project</h4>
-<h4>2)Make this directory 'as sourses root'</h4>
+<h4>Installation</h4>
+<h2>1)Download, then drag and drop the coolsite directory into your project</h4>
+<h2>2)Make this directory 'as sourses root'</h4>
 <hr>
 
 To deploy this project run
