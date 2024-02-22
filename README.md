@@ -24,3 +24,7 @@
 <p>This project was developed by me personally! </p>
 <br>
 <p>If you have questions or suggestions, please contact me through my email @nazik3110@gmail.com</p>
+
+```bash
+  npm run deploy
+```
