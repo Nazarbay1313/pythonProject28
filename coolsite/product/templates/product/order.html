@@ -25,6 +25,7 @@
       <td>{{ b.product.title }}</td>
       <td>{{ b.quantity }}</td>
       <td>{{ b.sum }}$</td>
+      <td><a href="{% url 'basket_delete' basket.id %}"><i class="fa-solid fa-trash"></i></a></td>
     </tr>
 {% endfor %}
   </tbody>
