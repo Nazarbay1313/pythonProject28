@@ -1,0 +1,36 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+
+{% if baskets %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">№ заказа</th>
+      <th scope="col">Фото</th>
+      <th scope="col">Заказчик</th>
+      <th scope="col">Адрес доставки</th>
+      <th scope="col">Наименование</th>
+      <th scope="col">Колл-во</th>
+      <th scope="col">Сумма заказа</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for b in baskets %}
+    <tr>
+      <th scope="row">№{{ b.user.id }}</th>
+      <td><img width="50px" src="{{ b.product.image.url }}" class="rounded float-start" alt="..."></td>
+      <td>{{ b.user.first_name }}</td>
+      <td>{{ b.user.address }}</td>
+      <td>{{ b.product.title }}</td>
+      <td>{{ b.quantity }}</td>
+      <td>{{ b.sum }}$</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+{% else %}
+<h5 class="card-title text-center">Заказов пока что нет</h5>
+{% endif %}
+
+{% endblock %}

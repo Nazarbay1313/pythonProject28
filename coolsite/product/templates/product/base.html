@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% load static %}
+    {% load humanize %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<!-- Шапка сайта -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'home' %}">SUSHI CLUB MASTER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'about_us' %}">О нас</a>
+</li>
+
+
+<div class="navbar-nav ml-auto">
+    <div class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ингридиенты <i class="fa-solid fa-paperclip"></i>
+       </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+{% for tag in tags %}
+         <a class="dropdown-item" href="{{ tag.get_absolute_url }}">#{{ tag.title }}</a>
+{% endfor %}
+       </div>
+     </div>
+</div>
+
+
+{% if user.is_superuser %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'order' %}">Заказы</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'contact' %}">Связаться с покупателем</a>
+</li>
+{% endif %}
+      </ul>
+
+    </div>
+{% if request.user.is_authenticated %}
+
+<div class="navbar-nav mx-auto">
+    <div class="nav-item dropdown ">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {% if user.image %}
+              <img width="50" src="{{ user.image.url }}" class="mr-3 rounded-circle" alt="Please,download your photo">
+          {% else %}
+              <i class="fa-regular fa-user"></i>
+          {% endif %}
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{% url 'update_profile' %}">Личный кабинет<i class="fa-solid fa-user-pen"></i></a>
+
+        <a class="dropdown-item" href="{% url 'baskets' %}">Корзина<i class="fa-solid fa-basket-shopping"></i></a>
+
+        <a class="dropdown-item" href="{% url 'logout_user' %}">Выход<i class="fa-solid fa-person-running"></i></a>
+      </div>
+    </div>
+</div>
+      <div class="navbar-nav mx-auto">Добро пожаловать,{{ user.first_name }} !  </div>
+{% else %}
+
+<a type="button" class="btn btn-light" href="{% url 'register' %}">Регистрация</a><a type="button" class="btn btn-light" href="{% url 'login' %}">Вход</a>
+
+{% endif %}
+  </nav>
+
+{% block content %}
+{% endblock %}
+
+{% if page_obj.has_other_pages %}
+<nav aria-label="...">
+  <ul class="pagination">
+{% if page_obj.has_previous %}
+    <li class="page-item">
+      <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&lt;</a>
+    </li>
+{% endif %}
+{% for p in paginator.page_range %}
+    {% if page_obj.number == p %}
+          <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">{{ p }}</a>
+          </li>
+    {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2  %}
+      <li class="page-item"><a class="page-link" href="?page={{ p }}">{{ p }}</a></li>
+    {% endif %}
+{% endfor %}
+{% if page_obj.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page_obj.next_page_number }}">&gt;</a>
+    </li>
+{% endif %}
+  </ul>
+</nav>
+{% endif %}
+
+  <!-- Подвал сайта -->
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© 2024 Название магазина</span>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>

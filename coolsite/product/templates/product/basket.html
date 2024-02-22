@@ -1,0 +1,36 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+
+{% if baskets %}
+<br>
+<table class="table">
+  <h3 class="text-center">{{ title }}</h3>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Фото</th>
+      <th scope="col">Наименование</th>
+      <th scope="col">Цена за еденицу</th>
+      <th scope="col">Колл-во</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for basket in baskets %}
+    <tr>
+      <th scope="row">{{ basket.product.pk }}</th>
+      <td><img width="50px" src="{{ basket.product.image.url }}" class="rounded float-start" alt="..."></td>
+      <td>{{ basket.product.title }}</td>
+      <td>{{ basket.product.price }}$</td>
+      <td><a href="{% url 'basket_remove' basket.id %}">-</a> {{ basket.quantity }} <a href="{% url 'basket_add' basket.product.id %}">+</a></td>
+      <td><a href="{% url 'basket_delete' basket.id %}"><i class="fa-solid fa-trash"></i></a></td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+<h3>Итого: {{ baskets.total_sum }}</h3>
+<a href="{% url 'success' %}">Оформить заказ</a>
+{% else %}
+<h5 class="card-title text-center">Корзина пока что пуста</h5>
+{% endif %}
+{% endblock %}

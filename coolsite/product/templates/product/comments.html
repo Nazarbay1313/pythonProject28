@@ -1,0 +1,49 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+
+ <!-- Форма добавления комментария -->
+
+<br>
+<h3 class="card-title text-center">Выскажите свое мнение о {{ product }} !</h3>
+<br>
+    <form method="post">
+      <div class="form-group">
+         {% csrf_token %}
+          {% if user.image %}
+             <img width="35" src="{{ user.image.url }}" class="mr-3 rounded-circle">
+          {% else %}
+             <i class="fa-regular fa-user"></i>
+          {% endif %}
+         {% for f in form %}
+         <label class="form-label" for="{{ f.id_for_label }}">{{ f.label }} </label>{{ f }}
+         {% endfor %}
+      </div>
+      <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+
+    <hr>
+
+    <!-- Список комментариев -->
+    <div class="comments">
+      <!-- Пример одного комментария -->
+      <div class="media mb-4">
+          {% for c in product.comment_set.all %}
+        <div class="media-body">
+        {% if c.user.image %}
+             <img width="35" src="{{ c.user.image.url }}" class="mr-3 rounded-circle" alt="Аватар">
+        {% else %}
+             <i class="fa-regular fa-user"></i>
+        {% endif %}
+          <h5 class="mt-0">@{{ c.user.username }}</h5>
+            <p>{{ c.content }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <small></small>
+          </div>
+            <hr>
+        </div>
+          {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}

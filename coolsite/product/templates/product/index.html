@@ -1,0 +1,38 @@
+{% extends 'product/base.html' %}
+{% load cache %}
+
+{% block content %}
+
+  <!-- Контент сайта -->
+  <div class="container mt-5">
+    <h2>{{ title }}</h2>
+    <div class="row">
+      <!-- Пример карточки товара -->
+
+  {% for product in products %}
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card">
+{% if product.image %}
+          <img width="240px" height="200px" src="{{ product.image.url }}" class="rounded mx-auto d-block" alt="Товар">
+{% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.content|truncatewords:8 }}</p>
+            <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Перейти</a>
+              <br>
+          {% if request.user.is_authenticated %}
+             <a href="{% url 'comment_add' product.id %}">Комментировать  <i class="fa-regular fa-comment"></i></a>
+          {% else %}
+              <a href="{% url 'login' %}">Комментировать  <i class="fa-regular fa-comment"></i></a>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+
+      <!-- Конец примера карточки товара -->
+      <!-- Здесь могут быть добавлены другие карточки товаров -->
+    </div>
+  </div>
+
+{% endblock %}

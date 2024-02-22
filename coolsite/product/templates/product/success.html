@@ -1,0 +1,15 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+
+
+<div class="card-body">
+                      <div class="wrapper text-center">
+                        <h4 class="card-title">Заказ оформлен!</h4>
+                        <p class="card-description">В течении 3-х минут с вами свяжеться администратор по вашему EMAIL.<br>
+                            Если ваш EMAIL устарел,то поменяйте его <a href="{% url 'update_profile' %}">ЗДЕСЬ</a></p>
+                        <a href="{% url 'home' %}"><button class="btn btn-outline-success"onclick="showSwal('success-message')">Домой</button></a>
+                      </div>
+</div>
+
+{% endblock %}
