@@ -46,4 +46,4 @@ celery -A coolsite worker -l INFO
 <br>
 <p>If you have questions or suggestions, please contact me through my email @nazik3110@gmail.com</p>
 
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+[![gmail]([https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white](https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg)https://static.dezeen.com/uploads/2020/10/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.jpg)]([https://twitter.com/](https://mail.google.com/)https://mail.google.com/)
