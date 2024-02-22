@@ -42,6 +42,6 @@ celery -A coolsite worker -l INFO
 <hr>
 <p>This project was developed by me personally! </p>
 <hr>
-<p>If you have questions or suggestions, please contact me through my email <b>@nazik3110@gmail.com</b></p>
+<p>If you have questions or suggestions, please contact me through my email <b>nazik3110@gmail.com</b></p>
 
 
