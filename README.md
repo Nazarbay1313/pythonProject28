@@ -17,6 +17,10 @@ Get a token and perform operations to create/delete/update objects.</p>
 <hr>
 
 ```bash
+cd coolsite
+```
+
+```bash
   pip install -r requirements.txt
 ```
 ```bash
@@ -43,6 +47,7 @@ redis-cli ping
 celery -A coolsite worker -l INFO
 ```
 <h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
+
 ```bash
 python manage.py runserver
 ```
