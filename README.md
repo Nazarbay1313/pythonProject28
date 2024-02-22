@@ -2,7 +2,7 @@
 <br>
 <h5>1)download, then drag and drop the coolsite directory into your project</h5>
 <h5></h5>2)make this directory 'as sourses root'</h5>
-<h5>2)pip install -r requirements.txt</h5>
+<h5>2)```bashpip install -r requirements.txt```</h5>
 <h5>3)python manage.py makemigrations</h5>
 <h5>4)python manage.py migrate</h5>
 <h5>5)python manage.py createsuperuser</h5>
