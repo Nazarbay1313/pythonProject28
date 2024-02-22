@@ -43,6 +43,9 @@ redis-cli ping
 celery -A coolsite worker -l INFO
 ```
 <h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
+```bash
+python manage.py runserver
+```
 <hr>
 <p>This project was developed by me personally! </p>
 <hr>
