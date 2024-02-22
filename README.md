@@ -1,5 +1,5 @@
 <h3>Hello! I am instructing you about this project.</h3>
-<br>
+<hr>
 <h5>1)download, then drag and drop the coolsite directory into your project</h5>
 <h5></h5>2)make this directory 'as sourses root'</h5>
 
