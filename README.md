@@ -40,8 +40,6 @@ celery -A coolsite worker -l INFO
 ```
 <h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)</h5>
 <hr>
-<h3>About this project: </h3>
-<hr>
 <p>This project was developed by me personally! </p>
 <hr>
 <p>If you have questions or suggestions, please contact me through my email <b>@nazik3110@gmail.com</b></p>
