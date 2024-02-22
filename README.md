@@ -46,7 +46,7 @@ redis-cli ping
 ```bash
 celery -A coolsite worker -l INFO
 ```
-<h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)
+<h5>*In this project, the celery’s work involves communicating with the client by mail (on behalf of the administrator)<br>
 PS: If the mail starts to fail, then change the mail and password to your data in the settings.py
 </h5>
 
