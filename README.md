@@ -2,6 +2,7 @@
 <hr>
 <h5>1)Download, then drag and drop the coolsite directory into your project</h5>
 <h5>2)Make this directory 'as sourses root'</h5>
+<hr>
 
 To deploy this project run
 
